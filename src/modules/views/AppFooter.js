@@ -80,10 +80,10 @@ function AppFooter(props) {
             >
               <Grid item className={classes.icons}>
                 <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
+                  <img src="/img/appFooterFacebook.png" alt="Facebook" />
                 </a>
                 <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
+                  <img src="/img/appFooterTwitter.png" alt="Twitter" />
                 </a>
               </Grid>
               <Grid item>© 2018 Onepirate</Grid>
@@ -95,10 +95,10 @@ function AppFooter(props) {
             </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/terms">Terms</Link>
+                <Link href="/terms">Terms</Link>
               </li>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/privacy">Privacy</Link>
+                <Link href="/privacy">Privacy</Link>
               </li>
             </ul>
           </Grid>
