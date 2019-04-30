@@ -72,12 +72,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
-                  src="/img/productHowItWorks1.svg"
+                  src="https://static.thenounproject.com/png/317420-200.png"
                   alt="suitcase"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                선별된 장소들 중 지금 당신이 가고 싶은 곳을
                 </Typography>
               </div>
             </Grid>
@@ -85,12 +85,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
                 <img
-                  src="/img/productHowItWorks2.svg"
+                  src="https://static.thenounproject.com/png/1717307-200.png"
                   alt="graph"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so be quick.
+                원하는 만큼 선택하고
                 </Typography>
               </div>
             </Grid>
@@ -98,13 +98,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>3.</div>
                 <img
-                  src="/img/productHowItWorks3.svg"
+                  src="https://static.thenounproject.com/png/2458076-200.png"
                   alt="clock"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'다음을 누르면 끝!'}
                 </Typography>
               </div>
             </Grid>

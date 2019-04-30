@@ -89,7 +89,7 @@ class ProductCTA extends React.Component {
                   Receive offers
                 </Typography>
                 <Typography variant="h5">
-                  Taste the holidays of the everyday close to home.
+                더 많은 장소들에 대한 정보를 얻고 싶다면 이메일을 기재해주세요. 당신이 원하는 장소를 언제든 추천해드릴게요!
                 </Typography>
                 <TextField noBorder className={classes.textField} placeholder="Your email" />
                 <Button
@@ -107,7 +107,7 @@ class ProductCTA extends React.Component {
             <Hidden smDown>
               <div className={classes.imageDots} />
               <img
-                src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
+                src="https://www.fabhow.com/wp-content/uploads/2018/06/night-club-intro.jpg"
                 alt="call to action"
                 className={classes.image}
               />

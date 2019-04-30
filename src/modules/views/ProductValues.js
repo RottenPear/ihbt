@@ -53,15 +53,15 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/img/productValues1.svg"
+                src="https://static.thenounproject.com/png/391514-200.png"
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                BigData
               </Typography>
               <Typography variant="h5">
-                {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                {', go for a mini-vacation just a few subway stops away from your home.'}
+                {'모아진 데이터 12345건, '}
+                {'당신에게 추천할 수 있는 장소 1234건'}
               </Typography>
             </div>
           </Grid>
@@ -69,31 +69,31 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/img/productValues2.svg"
+                src="http://rebobinart.com/wp-content/uploads/2018/02/instagram-png-instagram-icon-1600.png"
                 alt="graph"
+              />
+              <Typography variant="h6" className={classes.title}>
+                Ideal Lifestyle 
+              </Typography>
+              <Typography variant="h5">
+                {'인스타그램 인플루언서의 '}
+                {'라이프 스타일 속에서'}
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <div className={classes.item}>
+              <img
+                className={classes.image}
+                src="https://static.thenounproject.com/png/1806595-200.png"
+                alt="clock"
               />
               <Typography variant="h6" className={classes.title}>
                 New experiences
               </Typography>
               <Typography variant="h5">
-                {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
-                {'your Sundays will not be alike.'}
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <div className={classes.item}>
-              <img
-                className={classes.image}
-                src="/img/productValues3.svg"
-                alt="clock"
-              />
-              <Typography variant="h6" className={classes.title}>
-                Exclusive rates
-              </Typography>
-              <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {'당신이 원하는 분위기의, '}
+                {'당신에게 꼭 맞는 최적의 장소를 추천해드립니다.'}
               </Typography>
             </div>
           </Grid>

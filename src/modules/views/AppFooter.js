@@ -86,7 +86,7 @@ function AppFooter(props) {
                   <img src="/img/appFooterTwitter.png" alt="Twitter" />
                 </a>
               </Grid>
-              <Grid item>© 2018 Onepirate</Grid>
+              <Grid item>© 2019 Instarplace</Grid>
             </Grid>
           </Grid>
           <Grid item xs={6} sm={4} md={2}>

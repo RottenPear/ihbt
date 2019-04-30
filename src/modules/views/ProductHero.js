@@ -7,7 +7,7 @@ import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
+  'https://images.unsplash.com/photo-1536081905080-f14fb4d6e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1415&q=80';
 
 const styles = theme => ({
   background: {
@@ -38,10 +38,12 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
+        Upgrade your Days
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+      우리만 아는 숨은 명소
+      인플루언서들이 픽한, 
+      아직 뜨지 않은 그 장소를 추천해드립니다
       </Typography>
       <Button
         color="secondary"

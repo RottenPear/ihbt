@@ -41,7 +41,7 @@ function ProductSmokingHero(props) {
       <Typography variant="subtitle1" className={classes.link}>
         We are here to help. Get in touch!
       </Typography>
-      <img src="/img/producBuoy.svg" className={classes.buoy} alt="buoy" />
+      <img src="https://static.thenounproject.com/png/2121710-200.png" className={classes.buoy} alt="buoy" />
     </LayoutBody>
   );
 }
