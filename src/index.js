@@ -9,6 +9,8 @@ import SignUp from "./SignUp";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
 import ForgotPassword from "./ForgotPassword";
+import Select from "./Select";
+import Detail from "./Detail";
 
 ReactDOM.render(
     <Router>
@@ -19,6 +21,8 @@ ReactDOM.render(
             <Route path="/privacy" component={Privacy} />
             <Route path="/terms" component={Terms} />
             <Route path="/forgot-password" component={ForgotPassword} />
+            <Route path="/select" component={Select} />
+            <Route path="/detail" component={Detail} />
         </div>
     </Router>,
     document.getElementById('root')

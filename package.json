@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.10",
     "final-form": "^4.12.0",
     "markdown-to-jsx": "^6.9.4",
     "react": "^16.8.6",
