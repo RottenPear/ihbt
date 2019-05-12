@@ -115,7 +115,7 @@ function ProductHowItWorks(props) {
           variant="contained"
           className={classes.button}
           component={linkProps => (
-            <Link {...linkProps} href="/detail" variant="button" />
+            <Link {...linkProps} href="/list" variant="button" />
           )}
         >
           Get started

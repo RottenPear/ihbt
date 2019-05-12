@@ -11,6 +11,7 @@ import Terms from "./Terms";
 import ForgotPassword from "./ForgotPassword";
 import Select from "./Select";
 import Detail from "./Detail";
+import List from './List'
 
 ReactDOM.render(
     <Router>
@@ -23,6 +24,8 @@ ReactDOM.render(
             <Route path="/forgot-password" component={ForgotPassword} />
             <Route path="/select" component={Select} />
             <Route path="/detail" component={Detail} />
+            <Route path="/list" component={List} />
+
         </div>
     </Router>,
     document.getElementById('root')
