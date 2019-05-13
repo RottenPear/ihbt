@@ -11,16 +11,19 @@ import AppFooter from "./modules/views/AppFooter";
 const styles = theme => ({
     root: {
         flexGrow: 1,
+        textAlign: 'center',
     },
+    
     paper: {
         padding: theme.spacing.unit * 2,
-        margin: 'auto',
+        width: '50%',
         maxWidth: 500,
+        display: 'inline-block',
         marginBottom: theme.spacing.unit * 2
     },
     image: {
-        width: 128,
-        height: 128,
+        width: 250,
+        height: 250,
     },
     img: {
         margin: 'auto',
@@ -174,7 +177,6 @@ function Detail(props) {
         </Grid>
       </Paper>
 
-      
       <Paper className={classes.paper}>
         <Grid container spacing={16}>
           <Grid item>
