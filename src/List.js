@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import withRoot from './modules/withRoot';
 import compose from 'recompose/compose';
 import { withStyles } from '@material-ui/core/styles';
-
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
+import LayoutBody from './modules/components/LayoutBody';
+import Button from './modules/components/Button';
 import AppFooter from './modules/views/AppFooter';
 import AppAppBar from './modules/views/AppAppBar';
 
+
 const styles = theme => ({
   selected: {
-    border: '1px solid black',
+    border: '5px solid pink',
   },
   imageWrap: {
     width: '33%',
@@ -23,6 +27,10 @@ const styles = theme => ({
     textAlign: 'center',
     margin: '0 auto',
     width: '80%',
+  },
+  button: {
+    marginTop: theme.spacing.unit * 8,
+    marginLeft: 900,
   },
 });
 
@@ -87,12 +95,43 @@ class List extends Component {
         name: 'test3',
         src: 'https://dummyimage.com/600x400/e8e8e8/fff',
       },
+      {
+        id: 7,
+        name: 'test1',
+        src: 'https://dummyimage.com/600x400/ba88ba/fff',
+      },
+      {
+        id: 8,
+        name: 'test2',
+        src: 'https://dummyimage.com/600x400/f1677d/fff',
+      },
+      {
+        id: 9,
+        name: 'test3',
+        src: 'https://dummyimage.com/600x400/e8e8e8/fff',
+      },
+      {
+        id: 10,
+        name: 'test1',
+        src: 'https://dummyimage.com/600x400/ba88ba/fff',
+      },
+      {
+        id: 11,
+        name: 'test2',
+        src: 'https://dummyimage.com/600x400/f1677d/fff',
+      },
+      {
+        id: 12,
+        name: 'test3',
+        src: 'https://dummyimage.com/600x400/e8e8e8/fff',
+      },
     ];
     const { selectedItems } = this.state;
     const { classes } = this.props;
 
     return (
       <Fragment>
+        <LayoutBody className={classes.layoutBody} width="large">
         <AppAppBar />
         <div className={classes.itemWrap}>
           {items.map(item => (
@@ -105,11 +144,35 @@ class List extends Component {
               <img className={classes.image} src={item.src} alt={item.name} />
             </div>
           ))}
+
+          {items.map(item => (
+            <div
+              key={item.id}
+              className={`${classes.imageWrap} ${selectedItems.indexOf(item.id) > -1 ? classes.selected : ''}`}
+              data-id={item.id}
+              onClick={this.handleOnClick}
+            >
+              <img className={classes.image} src={item.src} alt={item.name} />
+            </div>
+          ))}
         </div>
+     
+        <Button
+          color="secondary"
+          size="large"
+          variant="contained"
+          className={classes.button}
+          component={linkProps => (
+            <Link {...linkProps} href="/detail" variant="button" />
+          )}
+        >
+          DONE
+          </Button>
+        </LayoutBody>      
         <AppFooter />
       </Fragment>
-    );
-  }
+  );
+}
 }
 
 export default compose(

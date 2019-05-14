@@ -12,6 +12,7 @@ const styles = theme => ({
     root: {
         flexGrow: 1,
         textAlign: 'center',
+      
     },
     
     paper: {
@@ -19,7 +20,9 @@ const styles = theme => ({
         width: '50%',
         maxWidth: 500,
         display: 'inline-block',
-        marginBottom: theme.spacing.unit * 2
+        marginBottom: theme.spacing.unit * 2,
+        marginRight: 100,
+        marginLeft: 100,
     },
     image: {
         width: 250,
