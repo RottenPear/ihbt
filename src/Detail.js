@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import AppAppBar from "./modules/views/AppAppBar";
 import AppFooter from "./modules/views/AppFooter";
+import withRoot from './modules/withRoot';
+import compose from 'recompose/compose';
 
 const styles = theme => ({
     root: {
@@ -264,7 +266,7 @@ function Detail(props) {
       </Paper>
 
             </div>
-            {/*<AppFooter />*/}
+            <AppFooter />
         </React.Fragment>
     );
 }
@@ -273,4 +275,8 @@ Detail.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Detail);
+
+export default compose(
+  withRoot,
+  withStyles(styles),
+)(Detail);
