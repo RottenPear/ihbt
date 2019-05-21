@@ -262,9 +262,8 @@ function Detail(props) {
           </Grid>
         </Grid>
       </Paper>
-
+      
             </div>
-            {/*<AppFooter />*/}
         </React.Fragment>
     );
 }

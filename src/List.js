@@ -125,6 +125,7 @@ class List extends Component {
         name: 'test3',
         src: 'https://dummyimage.com/600x400/e8e8e8/fff',
       },
+      
     ];
     const { selectedItems } = this.state;
     const { classes } = this.props;
