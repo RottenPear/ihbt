@@ -66,7 +66,8 @@ class Detail extends Component {
 
     this.state = {
       selectedItems: [],
-    }
+    };
+
     this.handleOnClick = this.handleOnClick.bind(this);
   }
 
