@@ -3,7 +3,7 @@ import camelize from 'camelize';
 import snakeize from 'snakeize';
 
 
-const API_URL = "http://ec95e3e6.ngrok.io/api";
+const API_URL = "http://8cdc56d2.ngrok.io/api";
 
 const requestCreator = defaultOptions => (additionalOptions = {}) => {
   const options = Object.assign({}, defaultOptions, additionalOptions);

@@ -87,6 +87,7 @@ class List extends Component {
     this.state = {
       selectedItems: [],
       details: [],
+      selectedCat: [],
       isDetailShow: false,
       venues: null,
     };
@@ -103,11 +104,12 @@ class List extends Component {
   handleOnClick(e) {
     const { selectedItems, details } = this.state;
     const id = parseInt(e.currentTarget.dataset.id, 10);
-    const { postUrl, photoUrl, name } = e.currentTarget.dataset;
+    const { postUrl, photoUrl, category, name } = e.currentTarget.dataset;
     const selectedItem = {
       id,
       postUrl,
       photoUrl,
+      category,
       name,
     }
     const itemIndex = selectedItems.indexOf(id);
@@ -123,7 +125,38 @@ class List extends Component {
   }
 
   handleSubmit() {
-    const { selectedItems, isDetailShow } = this.state;
+    const { details, selectedItems, isDetailShow, venues } = this.state;
+    const options = {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      uri: 'http://8cdc56d2.ngrok.io/api/recommend/',
+    };
+    for(const detail of details) {
+      console.log(detail)
+      switch(detail.category) {
+        case 'hip':
+          options.uri+='1';
+          break;
+        case 'modern':
+          options.uri+='2';
+          break;
+        case 'trendy':
+         options.uri+='3';
+          break;
+        case 'family':
+          options.uri+='4';
+          break;
+        case 'girl':
+          options.uri+='5';
+          break;
+      }
+    }
+    options.uri+='/'
+
+    rp(options)
+      .then((result) => { this.setState({ venues: JSON.parse(result) }); });
     if (selectedItems.length === 0) {
       alert('사진을 1장 이상 선택해주세요.');
       return;
@@ -131,7 +164,7 @@ class List extends Component {
     this.setState({ isDetailShow: true });
   }
 
-  fetchNext(uri = 'http://ec95e3e6.ngrok.io/api/venues/?limit=9') {
+  fetchNext(uri = 'http://8cdc56d2.ngrok.io/api/recommend/?limit=9') {
     const { venues } = this.state;
     const options = {
       method: 'GET',
@@ -162,6 +195,7 @@ class List extends Component {
                 data-photo-url={item.photo_url}
                 data-post-url={item.post_url}
                 data-name={item.venue_tag}
+                data-category={item.category}
                 onClick={this.handleOnClick}
                 style={{
                   'backgroundImage': `url('${item.photo_url}')`
@@ -187,7 +221,7 @@ class List extends Component {
         )}
         {isDetailShow && (
           <Fragment>
-            {details.map(detail => (
+            {venues.results.map(detail => (
               <div className={classes.detailWrap}>
                 <div
                   key={`detail-${detail.id}`}
@@ -196,12 +230,12 @@ class List extends Component {
                   <div
                     className={classes.detailImg}
                     style={{
-                      'backgroundImage': `url('${detail.photoUrl}')`
+                      'backgroundImage': `url('${detail.photo_url}')`
                     }}
                   />
                   <div>
-                    <p className={classes.detailName}>{detail.name}</p>
-                    <a className={classes.detailShow} href={detail.postUrl} target="_black">show detail</a>
+                    <p className={classes.detailName}>{detail.venue_tag}</p>
+                    <a className={classes.detailShow} href={detail.post_url} target="_black">show detail</a>
                   </div>
                 </div>
               </div>
